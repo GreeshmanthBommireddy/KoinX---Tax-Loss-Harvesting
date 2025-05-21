@@ -1,0 +1,226 @@
+.holdings-container {
+    background-color: #1A1A1A;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #E0E0E0;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px; 
+}
+
+.holdings-container.loading {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+}
+
+.holdings-header {
+    display: flex;
+    justify-content: flex-start; 
+    margin-bottom: 20px;
+}
+
+.holdings-header h2 {
+    font-size: 1.5em;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.holdings-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    overflow-x: auto; 
+    display: block; 
+}
+
+.holdings-container thead tr {
+    background-color: #2A2A2A; 
+    color: #BBBBBB;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.holdings-container th {
+    padding: 12px 15px;
+    border-bottom: 1px solid #3A3A3A;
+    cursor: pointer; 
+    white-space: nowrap; 
+}
+
+.holdings-container th:first-child {
+    width: 40px; 
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.holdings-container th span {
+    display: block; 
+    font-size: 0.8em;
+    color: #888;
+}
+
+.holdings-container tbody tr {
+    border-bottom: 1px solid #2A2A2A;
+    transition: background-color 0.2s ease;
+}
+
+.holdings-container tbody tr:last-child {
+    border-bottom: none;
+}
+
+.holdings-container tbody tr.selected-row {
+    background-color: rgba(47, 128, 237, 0.1);
+}
+
+.holdings-container td {
+    padding: 12px 15px;
+    font-size: 0.9em;
+    vertical-align: middle;
+    white-space: nowrap; 
+}
+
+.holdings-container td:first-child {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.holdings-container .asset-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.holdings-container .asset-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.holdings-container .asset-cell div {
+    display: flex;
+    flex-direction: column;
+}
+
+.holdings-container .asset-cell span {
+    font-size: 0.8em;
+    color: #BBBBBB;
+}
+
+.holdings-container td span {
+    display: block; 
+    font-size: 0.8em;
+    color: #BBBBBB;
+}
+
+.holdings-container .gain {
+    color: #4CAF50; 
+    font-weight: 500;
+}
+
+.holdings-container .loss {
+    color: #FF6B6B; 
+    font-weight: 500;
+}
+
+.holdings-container .view-all-button {
+    background-color: #2F80ED; 
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: block; 
+    margin: 20px auto 0 auto; 
+    width: fit-content;
+    font-weight: 600;
+}
+
+.holdings-container .view-all-button:hover {
+    background-color: #2667CC;
+}
+
+.holdings-container .view-all-button:active {
+    background-color: #1A50A6;
+}
+
+
+@media (max-width: 768px) {
+    .holdings-container {
+        padding: 15px;
+    }
+
+    .holdings-header h2 {
+        font-size: 1.3em;
+    }
+
+    .holdings-container table {
+        font-size: 0.85em;
+    }
+
+    .holdings-container th,
+    .holdings-container td {
+        padding: 10px 12px;
+    }
+
+    .holdings-container th:first-child,
+    .holdings-container td:first-child {
+        padding-left: 8px;
+        padding-right: 4px;
+    }
+
+    .holdings-container .asset-cell {
+        gap: 8px;
+    }
+
+    .holdings-container .asset-logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    .holdings-container .view-all-button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .holdings-container {
+        padding: 10px;
+    }
+
+    .holdings-header h2 {
+        font-size: 1.1em;
+    }
+
+    .holdings-container table {
+        font-size: 0.8em; 
+    }
+
+    .holdings-container th,
+    .holdings-container td {
+        padding: 8px 10px;
+    }
+
+    .holdings-container .view-all-button {
+        font-size: 0.85em;
+        padding: 7px 12px;
+        margin-top: 12px;
+    }
+
+    
+    .holdings-container th:nth-child(4), 
+    .holdings-container td:nth-child(4) {
+        
+        padding: 8px 5px;
+    }
+}
